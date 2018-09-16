@@ -6,11 +6,7 @@
  */
 package com.up.student.util;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 import com.up.student.AppConstants;
 
@@ -97,6 +93,21 @@ public class DBUtil {
 		}
 
 		return rs;
+	}
+
+	public boolean exeute(String sql) {
+		if (getConn() == null) {
+			return false;
+		}
+		try {
+			Statement statement = conn.createStatement();
+			statement.execute(sql);
+			statement.close();
+			return true;
+		} catch (SQLException e) {
+//			e.printStackTrace();
+			return false;
+		}
 	}
 
 	private Connection getConn() {

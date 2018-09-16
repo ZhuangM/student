@@ -12,10 +12,10 @@ package com.up.student;
  */
 public class AppConstants {
 	// jdbc
-	public static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/student?useUnicode=true&amp;characterEncodeing=UTF-8";
-	public static final String JDBC_USERNAME = "******";
-	public static final String JDBC_PASSWORD = "******";
-	public static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	public static final String JDBC_URL = "jdbc:sqlite:test.db";
+	public static final String JDBC_USERNAME = "test";
+	public static final String JDBC_PASSWORD = "test";
+	public static final String JDBC_DRIVER = "org.sqlite.JDBC";
 
 	// student field
 	public static final String STUDENT_NAME = "姓名";

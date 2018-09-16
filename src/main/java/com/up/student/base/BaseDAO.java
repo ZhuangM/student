@@ -58,8 +58,6 @@ public abstract class BaseDAO {
 			}
 		} catch (SQLException se) {
 			se.printStackTrace();
-		} finally {
-			db.close();
 		}
 	}
 }
